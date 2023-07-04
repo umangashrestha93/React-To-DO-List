@@ -1,0 +1,53 @@
+.home {
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.home h1 {
+  color: #0084ff;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+.link-button {
+  background-color: #0084ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+  background-color: #1b73cb;
+}
+
+.link-button {
+  background-color: #0084ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+  background-color: #005cbf;
+}
+
+.link-button a {
+  text-decoration: none;
+  color: white;
+}
