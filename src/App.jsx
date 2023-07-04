@@ -3,9 +3,7 @@ import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-rou
 import './App.css'
 import AddUser from './components/AddUser'
 import Home from './components/Home'
-import ActivityPage from './ActivityPage'
 import ToDoList from './components/ToDoList'
-
 function App() {
   return (
    <>
@@ -15,6 +13,7 @@ function App() {
    {/* <Home />
   <AddUser /> */}
   {/* <ToDoList /> */}
+  
   <Router>
     <Routes>
       <Route path='/' element={<Home />} />

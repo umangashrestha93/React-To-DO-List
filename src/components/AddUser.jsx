@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
 import axios from 'axios';
 import '../css/adduser.css'
 import { Link, useNavigate } from 'react-router-dom';
+import Validation from './Validation';
+import apiEndpoint from '../constants/apiEndpoint';
 //function to add user
 function AddUser() {
     const [input, setInput] = useState({
@@ -11,7 +13,15 @@ function AddUser() {
     });
     const [tableData, setTableData] = useState([])
     const [edit, setEditData] = useState(false)
-    console.log(tableData)
+    // const [error, setError] = useState({})
+
+    useEffect(()=>{
+        axios.get(`${apiEndpoint}/api/users`)
+        .then((res)=>{
+            console.log(res.data)
+            setTableData(res.data.data)
+        })
+    }, [])
  
     // const navigate = useNavigate()
     function handleChange(e){
@@ -41,12 +51,14 @@ function AddUser() {
     //         email: ""
     //     });
     // }
+
     const handleSubmit = async event =>{
         event.preventDefault()
+        // setError(Validation(input))
         try {
             const { name, email } = input
             const response =   
-            await axios.post(`http://127.0.0.1:3000/api/users`, {
+            await axios.post(`${apiEndpoint}/api/users`, {
                 name,
                 email,
             })
